@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% load custom_markdown %}
+{%block pic%} style="background-image: url('/static/img/about-bg.jpg')" {%endblock%}
+{%block html_name%}About Me{%endblock%}
+{% block content %}
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {{post.aboutme|custom_markdown}}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
